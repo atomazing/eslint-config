@@ -1,0 +1,15 @@
+# dependencies
+node_modules
+
+# build
+dist
+
+# code editors
+.idea
+.vscode
+
+# misc
+.DS_Store
+.turbo
+eslint-output-config*.json
+npm-debug.log
