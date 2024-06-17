@@ -1,17 +1,17 @@
 {
 	"name": "@atomazing-org/eslint-config",
-	"version": "1.0.3",
+	"version": "1.0.1",
 	"type": "commonjs",
 	"license": "MIT",
 	"author": "whoisYeshua + MarkSinD",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/atomazing-org/eslint-config.git"
+		"url": "git+https://github.com/atomazing/eslint-config.git"
 	},
 	"bugs": {
-		"url": "https://github.com/atomazing-org/eslint-config"
+		"url": "https://github.com/atomazing/eslint-config.git"
 	},
-	"homepage": "https://github.com/atomazing-org/eslint-config",
+	"homepage": "https://github.com/atomazing/eslint-config.git",
 	"keywords": [
 		"eslint",
 		"atomazing"
