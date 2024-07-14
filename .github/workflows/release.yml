@@ -32,3 +32,4 @@ jobs:
         run: HUSKY=0 npx semantic-release --dry-run # disable git hooks for @semantic-release/git plugin commits
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
