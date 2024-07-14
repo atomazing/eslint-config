@@ -1,5 +1,5 @@
 module.exports = {
-	ignorePatterns: ['node_modules', 'dist', '.eslintrc.js'],
+	ignorePatterns: ['node_modules', 'dist', 'coverage', '.eslintrc.js'],
 	env: {
 		browser: true,
 		es2023: true,
@@ -8,6 +8,8 @@ module.exports = {
 	parserOptions: {
 		// Override @typescript-eslint 2018 default  https://typescript-eslint.io/packages/parser/#ecmaversion
 		ecmaVersion: 2023,
+		tsconfigRootDir: process.cwd(), // Set the root directory for TypeScript configuration to the current working directory where ESLint is executed
+		project: true, // Find the tsconfig.json nearest to each source file
 	},
 	extends: [
 		require.resolve('./airbnb'),
@@ -34,6 +36,18 @@ module.exports = {
 		// Enforce consistent usage of type imports
 		// https://typescript-eslint.io/rules/consistent-type-imports
 		'@typescript-eslint/consistent-type-imports': 'warn',
+
+		// Disallow the declaration of empty interfaces
+		// https://typescript-eslint.io/rules/no-empty-interface
+		'@typescript-eslint/no-empty-interface': 'error',
+
+		// Disallow explicit type declarations for variables or parameters initialized to a number, string, or boolean
+		// https://typescript-eslint.io/rules/no-inferrable-types
+		'@typescript-eslint/no-inferrable-types': 'error',
+
+		// Disallow non-null assertions using the ! postfix operator
+		// https://typescript-eslint.io/rules/no-non-null-assertion
+		'@typescript-eslint/no-non-null-assertion': 'warn',
 
 		// Disallow non-import statements appearing before import statements
 		// https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/first.md
@@ -106,5 +120,9 @@ module.exports = {
 		// Array#reduce() and Array#reduceRight() usually result in hard-to-read and less performant code. In almost every case, it can be replaced by .map, .filter, or a for-of loop.
 		// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-reduce.md
 		'unicorn/no-array-reduce': 'off',
+
+		// Enforce the use of built-in methods instead of unnecessary polyfills (не используем полифилы на проекте, лишняя проверка)
+		// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unnecessary-polyfills.md
+		'unicorn/no-unnecessary-polyfills': 'off',
 	},
 }

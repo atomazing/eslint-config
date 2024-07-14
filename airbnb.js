@@ -40,11 +40,5 @@ module.exports = {
 				'import/no-extraneous-dependencies': 'off',
 			},
 		},
-		{
-			files: ['**/*.d.ts'],
-			rules: {
-				'*': 'off',
-			},
-		},
 	],
 }
