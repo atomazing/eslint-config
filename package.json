@@ -1,6 +1,6 @@
 {
 	"name": "@atomazing-org/eslint-config",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"type": "commonjs",
 	"license": "MIT",
 	"author": "whoisYeshua + MarkSinD",
@@ -20,29 +20,35 @@
 		"access": "public",
 		"registry": "https://registry.npmjs.org/"
 	},
+	"files": [
+		"react.js",
+		"airbnb.js",
+		"index.js",
+		"CHANGELOG.md"
+	],
 	"scripts": {
 		"format": "npm run format:prettier",
 		"format:prettier": "npm run lint:prettier -- --write",
 		"lint": "npm run lint:prettier",
 		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check",
-		"clean": "rimraf .turbo dist node_modules",
+		"clean": "rimraf node_modules",
 		"debug:prettier": "prettier \"./index.js\" --loglevel debug",
 		"semantic-release:local-check": "semantic-release --dry-run",
 		"prepare": "husky"
 	},
 	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^7.10.0",
-		"@typescript-eslint/parser": "^7.10.0",
+		"@typescript-eslint/eslint-plugin": "^7.16.0",
+		"@typescript-eslint/parser": "^7.16.0",
 		"eslint-config-airbnb-base": "^15.0.0",
 		"eslint-config-airbnb-typescript": "^18.0.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-import-resolver-typescript": "^3.6.1",
 		"eslint-plugin-eslint-comments": "^3.2.0",
 		"eslint-plugin-import": "^2.29.1",
-		"eslint-plugin-jsx-a11y": "^6.8.0",
-		"eslint-plugin-react": "^7.34.1",
+		"eslint-plugin-jsx-a11y": "^6.9.0",
+		"eslint-plugin-react": "^7.34.4",
 		"eslint-plugin-react-hooks": "^4.6.2",
-		"eslint-plugin-react-refresh": "^0.4.7",
+		"eslint-plugin-react-refresh": "^0.4.8",
 		"eslint-plugin-unicorn": "^53.0.0"
 	},
 	"devDependencies": {
@@ -51,17 +57,18 @@
 		"@semantic-release/changelog": "^6.0.3",
 		"@semantic-release/git": "^10.0.1",
 		"conventional-changelog-conventionalcommits": "^8.0.0",
-		"eslint": "^8.56.0",
+		"eslint": "^8.57.0",
 		"husky": "^9.0.11",
-		"semantic-release": "23"
+		"lint-staged": "^15.2.7",
+		"prettier": "^3.3.3",
+		"rimraf": "^5.0.9",
+		"semantic-release": "^23.1.1"
 	},
 	"packageManager": "pnpm@9.1.2",
 	"peerDependencies": {
-		"eslint": "^7.32.0"
+		"eslint": ">=8.48.0 <9"
 	},
-	"eslintIgnore": [
-		"node_modules",
-		"coverage",
-		"dist"
-	]
+	"engines": {
+		"node": ">=18.18"
+	}
 }
