@@ -1,14 +1,12 @@
-name: Release workflow
+name: Manual Release workflow
 
+# This allows the workflow to be triggered manually
 on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+  workflow_dispatch:
 
 jobs:
   release:
-    name: Release
+    name: Manual release
     runs-on: ubuntu-latest
 
     permissions:
