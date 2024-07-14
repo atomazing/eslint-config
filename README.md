@@ -1,51 +1,54 @@
 # What is @atomazing-org/eslint-config?
-@atomazing-org/eslint-config is a carefully curated set of ESLint rules aimed at optimizing the development process. Some rules have been excluded or modified in this set that could negatively affect developer convenience. For example, using export default has been prohibited to maintain a uniform style across the project, reducing the load on the developer. Additionally, some rules were moved from errors (error) to warnings (warn), allowing for more flexible management of the coding process without the strict need to fix every minor detail.
+
+`@atomazing-org/eslint-config` is a carefully curated set of ESLint rules aimed at optimizing the development process. Some rules have been excluded or modified in this set that could negatively affect developer convenience. For example, using export default has been prohibited to maintain a uniform style across the project, reducing the load on the developer. Additionally, some rules were moved from errors (error) to warnings (warn), allowing for more flexible management of the coding process without the strict need to fix every minor detail.
 
 # Connecting the dependency @atomazing-org/eslint-config
+
 To connect, you need to install eslint in the project, then create **.eslintrc.js** and **.eslintignore.js** files in the root of the project. Let's consider creating the files. **.eslintrc.js**:
 
-    module.exports = {  
-    parserOptions: {
-        tsconfigRootDir: __dirname,
-        project: './tsconfig.json',
-    },  
+```js
+module.exports = {
     extends: ['@atomazing-org/eslint-config'],
-    settings: {
-        'правило-eslint': 'off'
+    rules: {
+        'some-eslint-rule': 'off'
     },
     ...
 }
+```
 
-In **.eslintignore.js**, place all files that should not be validated by eslint rules."
+In **.eslintignore**, place all files that should not be validated by eslint rules:
 
     node_modules
-	tsconfig.json
-
+    tsconfig.json
 
 You can run eslint on a project using the command:
 
-**npm run lint:eslint && npm run lint:prettier && npm run lint:ts**
+`npx eslint "**/*.{js,ts,tsx}"`
 
 However, it's more convenient to move this command into the scripts section of package.json, for example, through the format command and call it via npm run format.
 
-       {
-    	    "name": "my-app",
-    	    "version": "1.0.0",
-    	    "description": "",
-    	    "scripts": {
-    	        "format": "npm run lint:eslint -- --fix",
-    	    },
-    	    "dependencies": {
-    	        ...
-    	    },
-    	    "devDependencies": {
-    	        ...
-    	    },
-    }
-
+```json
+{
+    "name": "my-app",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "format:eslint": "npm run lint:eslint -- --fix",
+        "lint:eslint": "eslint \"**/*.{js,ts,tsx}\"",
+    },
+    "dependencies": {
+        ..
+    },
+    "devDependencies": {
+        ...
+    },
+}
+```
 
 # Base @atomazing-org/eslint-config
+
 Libraries and plugins for ESLint are designed to enhance code quality during React development and ensure compliance with accessibility standards. Here are the main plugins that are used:
+
 1. **plugin:react/recommended**: This plugin provides a set of recommended rules for React projects, including checking prop usage, component types, array keys, and other aspects related to React. It helps detect potential issues in the code, such as missing required props or incorrect hook usage.
 2. **plugin:react/jsx-runtime**: With React 17 and above, a new JSX transformation was introduced that does not require explicit import of React in components. However, this may cause ESLint errors indicating that React is out of scope. The plugin:react/jsx-runtime is added to the ESLint configuration to disable relevant rules and prevent these errors.
 3. **plugin:react-hooks/recommended**: This plugin is intended for working with React hooks. It includes rules that help avoid common mistakes when using hooks, such as incorrect dependencies or violation of hook call order. This is especially important for maintaining the purity and predictability of component state.
@@ -58,9 +61,11 @@ Libraries and plugins for ESLint are designed to enhance code quality during Rea
 10. **prettier**: Prettier is a code formatting tool that can be integrated with ESLint through the eslint-config-prettier plugin. It automatically formats files according to certain rules, making the code more readable and consistent.
 
 # Benefits of using @atomazing-org/eslint-config:
+
 The ESLint configuration is stored in an npm repository, making it accessible to all team members. This ensures that all project participants adhere to the same coding standards, promoting the unification of the development process and improving code quality. Moreover, with the extracted ESLint configuration, integrating linting into continuous integration (CI) and delivery (CD) processes becomes easy. This automates the code check against standards before deployment, reducing the risk of introducing errors into production. Storing the ESLint configuration in an npm repository simplifies collaborative work on the project. If there is no eslint on the project, it can be easily installed, and there is no need to create a new configuration from scratch for a new project.
 
 Main components of the configuration:
+
 1. **ignorePatterns**: Defines directories or files that ESLint should ignore during code checking. Includes node_modules, dist, and.eslintrc.js.  
    env: Indicates environments where the code will run. Here, browser, es2023, and node are specified, allowing the use of modern ECMAScript features and Node.js APIs.
 2. **parserOptions**: Parser settings, including the ECMAScript version (ecmaVersion: 2023) to support the latest language capabilities.
