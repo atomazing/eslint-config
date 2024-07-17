@@ -1,0 +1,17 @@
+# dependencies
+node_modules
+package-lock.json
+pnpm-lock.yaml
+
+# build
+dist
+
+# code editors
+.idea
+.vscode
+
+# misc
+.DS_Store
+.turbo
+eslint-output-config*.json
+*.hbs
