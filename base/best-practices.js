@@ -4,7 +4,7 @@
 /** @type {import('eslint').Linter.Config[]} */
 const config = [
 	{
-		name: 'best-practices-monorepo-example',
+		name: 'best-practices-atomazing',
 		rules: {
 			// enforces return statements in callbacks of array's methods
 			// https://eslint.org/docs/rules/array-callback-return

@@ -4,7 +4,7 @@
 /** @type {import('eslint').Linter.Config[]} */
 const config = [
 	{
-		name: 'imports-monorepo-example',
+		name: 'imports-atomazing',
 		settings: {
 			'import/ignore': ['node_modules', '\\.(css|hbs|svg|json)$'],
 		},
@@ -75,7 +75,7 @@ const config = [
 					groups: [['builtin', 'external'], ['internal', 'parent'], ['sibling', 'index'], 'type'],
 					pathGroups: [
 						{ pattern: 'react*', group: 'external', position: 'before' },
-						{ pattern: '@monorepo-example/*', group: 'external', position: 'after' },
+						{ pattern: '@atomazing-org/*', group: 'external', position: 'after' },
 					],
 					pathGroupsExcludedImportTypes: ['type'],
 					distinctGroup: false,

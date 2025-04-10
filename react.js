@@ -8,7 +8,7 @@ const config = [
 	reactPlugin.configs.flat['jsx-runtime'],
 	reactHooksPlugin.configs['recommended-latest'],
 	{
-		name: 'react-monorepo-example',
+		name: 'react-atomazing',
 		plugins: {
 			'react-refresh': reactRefreshPlugin,
 		},

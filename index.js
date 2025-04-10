@@ -12,7 +12,7 @@ import unicornConfig from './unicorn.js'
 const config = [
 	globalIgnores(
 		['node_modules', 'dist', 'public', 'coverage', 'eslint.config.{js,mjs,ts}'],
-		'globalIgnores-monorepo-example'
+		'globalIgnores-atomazing-example'
 	),
 	...baseConfig,
 	...reactConfig,
@@ -52,13 +52,13 @@ const config = [
 ]
 
 /**
- * Defines a monorepo ESLint configuration
+ * Defines a atomazing ESLint configuration
  * @param {Object} options - Configuration options
  * @param {string} options.dirname - Directory path for TypeScript configuration resolution
  */
-export const defineMonorepoConfig = ({ dirname }) =>
+export const defineAtomazingConfig = ({ dirname }) =>
 	defineConfig({
-		name: '@monorepo-example/eslint-config',
+		name: '@atomazing-org/eslint-config',
 		languageOptions: {
 			parserOptions: {
 				tsconfigRootDir: dirname,

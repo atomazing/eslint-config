@@ -4,7 +4,7 @@
 /** @type {import('eslint').Linter.Config[]} */
 const config = [
 	{
-		name: 'types-monorepo-example',
+		name: 'types-atomazing',
 		rules: {
 			// Enforce consistent usage of type imports
 			// https://typescript-eslint.io/rules/consistent-type-imports

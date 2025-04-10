@@ -4,7 +4,7 @@
 /** @type {import('eslint').Linter.Config[]} */
 const config = [
 	{
-		name: 'errors-monorepo-example',
+		name: 'errors-atomazing',
 		rules: {
 			// babel, swc or other transpiler inserts `'use strict';` for us
 			// https://eslint.org/docs/rules/strict

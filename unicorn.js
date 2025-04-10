@@ -4,7 +4,7 @@ import unicornPlugin from 'eslint-plugin-unicorn'
 const config = [
 	unicornPlugin.configs.recommended,
 	{
-		name: 'unicorn-monorepo-example',
+		name: 'unicorn-atomazing',
 		rules: {
 			// Enforce specific import styles per module (уже полно правил по импортам, еще и слегка бьет по перфу)
 			// https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/import-style.md

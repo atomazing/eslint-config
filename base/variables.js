@@ -4,7 +4,7 @@
 /** @type {import('eslint').Linter.Config[]} */
 const config = [
 	{
-		name: 'variables-monorepo-example',
+		name: 'variables-atomazing',
 		rules: {
 			// require function expressions to have a name
 			// https://eslint.org/docs/rules/func-names
