@@ -1,12 +1,18 @@
 # What is @atomazing-org/eslint-config?
 
-`@atomazing-org/eslint-config` is a carefully curated set of ESLint rules aimed at optimizing the development process, based on [`eslint-config-airbnb-base` config](https://www.npmjs.com/package/eslint-config-airbnb-base). Some rules have been excluded or modified in this set that could negatively affect developer convenience. For example, using export default has been prohibited to maintain a uniform style across the project, reducing the load on the developer. Additionally, some rules were moved from errors (error) to warnings (warn), allowing for more flexible management of the coding process without the strict need to fix every minor detail.
+`@atomazing-org/eslint-config` is a carefully curated set of ESLint rules aimed at optimizing the development process, based on [`eslint-config-airbnb-base` config](https://www.npmjs.com/package/eslint-config-airbnb-base). Some rules have been excluded or modified in this set that could negatively affect developer convenience. For example, using export default has been prohibited to maintain a uniform style across the project, reducing the load on the developer. Additionally, some rules were moved from errors to warnings, allowing for more flexible management of the coding process without the strict need to fix every minor detail.
 
 ## Connecting the dependency @atomazing-org/eslint-config
 
-To connect, you need to install `@atomazing-org/eslint-config` in the project, then create `eslint.config.js` (or `eslint.config.mjs` if your project is CommonJS and doesn't have `"type": "module"` in `package.json`) in the root of the project.
+To connect, you need to install `@atomazing-org/eslint-config` in the project.
 
-_for node versions >= 20.11.0:_
+```bash
+npm i -D @atomazing-org/eslint-config
+```
+
+Then create `eslint.config.js` _(or `eslint.config.mjs` if your project is CommonJS and doesn't have `"type": "module"` in `package.json`)_ in the root of the project.
+
+for modern node versions >= 20.11.0 `eslint.config.*` example:
 
 ```js
 import { defineAtomazingConfig } from '@atomazing-org/eslint-config'
@@ -16,7 +22,7 @@ export default defineAtomazingConfig({
 })
 ```
 
-_for node versions < 20.11.0:_
+_for node versions < 20.11.0 `eslint.config.*` example:_
 
 ```js
 import { fileURLToPath } from 'node:url'
@@ -41,6 +47,8 @@ globalIgnores(['node_modules', 'dist', 'public', 'coverage', 'eslint.config.{js,
 
 If you need to add additional ignore patterns, you can extend the configuration:
 
+`eslint.config.*` example:
+
 ```js
 import { globalIgnores } from 'eslint/config'
 import { defineAtomazingConfig } from '@atomazing-org/eslint-config'
@@ -51,6 +59,10 @@ export default [
 ]
 ```
 
+<br>
+
+_[`.eslintignore` is not supported by ESLint anymore](https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files)_
+
 ## Run linter
 
 You can run eslint on a project using the command:
@@ -60,6 +72,8 @@ npx eslint "**/*.{js,ts,tsx}"
 ```
 
 However, it's more convenient to move this command into the scripts section of `package.json`, for example, through the format command and call it via npm run format.
+
+`package.json` example:
 
 ```json
 {
@@ -80,6 +94,14 @@ However, it's more convenient to move this command into the scripts section of `
 }
 ```
 
+_Optional_. Run the [visual tool](https://eslint.org/blog/2024/04/eslint-config-inspector/) to help you understand and inspect the resulting ESLint rules:
+
+```bash
+npx eslint --inspect-config
+```
+
+---
+
 ## ⚠️ Migration to v2
 
 1. Update dependencies:
@@ -92,17 +114,21 @@ However, it's more convenient to move this command into the scripts section of `
    npm i -D eslint@9
    ```
 
-2. Replace `.eslintrc.json` (or `.eslintrc.js`) with `eslint.config.js`:
+2. Replace `.eslintrc.json` (or `.eslintrc.js`) with `eslint.config.*`:
 
-   - Use `eslint.config.js` for ESM projects (with `"type": "module"` in `package.json`)
-   - Use `eslint.config.mjs` for CommonJS projects (without `"type": "module"` in `package.json`)
+   - Use **`eslint.config.js`** for ESM projects (with `"type": "module"` in `package.json`)
+   - Use **`eslint.config.mjs`** for CommonJS projects (without `"type": "module"` in `package.json`)
 
-3. Review breaking changes in dependencies:
+3. Setup configuration file [according our docs](#connecting-the-dependency-atomazing-orgeslint-config)
+
+4. If you have custom ignore patterns in `.eslintignore`, [migrate them to use `globalIgnores` in your config](#files-ignoring) and then **delete** `.eslintignore` file, since it's not supported anymore by ESLint v9
+
+5. Review breaking changes in transitive dependencies:
 
    - [typescript-eslint v8 breaking changes](https://typescript-eslint.io/blog/announcing-typescript-eslint-v8/)
    - [ESLint v9 breaking changes](https://eslint.org/docs/latest/use/migrate-to-9.0.0)
 
-4. Update ESLint disable comments, if you have them:
+6. Update ESLint disable comments, _if you have them_:
 
    Replace `eslint-plugin-eslint-comments/require-description` with `@eslint-community/eslint-comments/require-description`
 
@@ -118,22 +144,26 @@ However, it's more convenient to move this command into the scripts section of `
    // eslint-disable-next-line @eslint-community/eslint-comments/require-description -- not acceptable
    ```
 
-5. Additional considerations:
+7. Additional considerations:
 
    - Review your custom ESLint rules and ensure they're compatible with the flat config system
    - If you're using custom plugins, make sure they support ESLint v9's flat config
    - Check that your CI/CD pipelines are updated to use the new configuration format
-   - If you have custom ignore patterns in `.eslintignore`, migrate them to use `globalIgnores` in your config
+   - check [FAQ](#faq)
 
-6. Troubleshooting:
+8. Troubleshooting:
    - If you encounter TypeScript-related errors, ensure your `tsconfig.json` is properly configured
    - If you see unexpected rule behavior in default eslint rules, check the [ESLint v9 migration guide](https://eslint.org/docs/latest/use/migrate-to-9.0.0) for rule changes
+
+---
 
 ## FAQ
 
 1. _How to add custom rules?_
 
    Extend base config and then apply your rules:
+
+   `eslint.config.*` example:
 
    ```js
    import { defineAtomazingConfig } from '@atomazing-org/eslint-config'
@@ -143,7 +173,8 @@ However, it's more convenient to move this command into the scripts section of `
    	{
    		name: 'your-config-name',
    		rules: {
-   			'@typescript-eslint/no-explicit-any': 'off',
+   			'@typescript-eslint/no-explicit-any': 'warn',
+   			'react/jsx-handler-names': 'off',
    		},
    	},
    ]
@@ -151,29 +182,34 @@ However, it's more convenient to move this command into the scripts section of `
 
 2. _How can I get more control over applied rules and settings?_
 
+   `eslint.config.*` example:
+
    ```js
    import { defineConfig } from 'eslint/config' // this dependency should transitively come from '@atomazing-org/eslint-config'
    import atomazingConfig from '@atomazing-org/eslint-config'
 
-   export default Configuration Files
-   ({
-       languageOptions: {
-           parserOptions: {
-               tsconfigRootDir: import.meta.dirname, // or tsconfigRootDir: path.dirname(fileURLToPath(import.meta.url)) for node versions < 20.11.0
-           },
-       },
-       extends: [atomazingConfig],
-       settings: {
-           'import/resolver': {
-               typescript: { project: `${import.meta.dirname}/tsconfig.json` }, // or project: path.dirname(fileURLToPath(import.meta.url)) for node versions < 20.11.0
-           },
-       },
+   export default defineConfig({
+   	languageOptions: {
+   		parserOptions: {
+   			tsconfigRootDir: import.meta.dirname, // or tsconfigRootDir: path.dirname(fileURLToPath(import.meta.url)) for node versions < 20.11.0
+   		},
+   	},
+   	extends: [atomazingConfig],
+   	settings: {
+   		'import/resolver': {
+   			typescript: { project: `${import.meta.dirname}/tsconfig.json` }, // or project: path.dirname(fileURLToPath(import.meta.url)) for node versions < 20.11.0
+   		},
+   	},
+   	rules: {
+   		'@typescript-eslint/no-explicit-any': 'warn',
+   		'react/jsx-handler-names': 'off',
+   	},
    })
    ```
 
-   Check [ESLint Configuration Files](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file) for understanding configuration files.
+   Check the [ESLint Configuration Files documentation](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file) to understand configuration files.
 
-   Ensure setting `languageOptions.parserOptions.tsconfigRootDir` and `settings.['import/resolver'].typescript` for TS support for rules.
+   ⚠️ Ensure you set `languageOptions.parserOptions.tsconfigRootDir` and `settings.['import/resolver'].typescript` for TS support in type rules.
 
 ## Base @atomazing-org/eslint-config
 
