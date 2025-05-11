@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/eaf0d86c-feeb-4420-b870-1857b92ca7f5" />
+</p>
+
 # What is @atomazing-org/eslint-config?
 
 `@atomazing-org/eslint-config` is a carefully curated set of ESLint rules aimed at optimizing the development process, based on [`eslint-config-airbnb-base` config](https://www.npmjs.com/package/eslint-config-airbnb-base). Some rules have been excluded or modified in this set that could negatively affect developer convenience. For example, using export default has been prohibited to maintain a uniform style across the project, reducing the load on the developer. Additionally, some rules were moved from errors to warnings, allowing for more flexible management of the coding process without the strict need to fix every minor detail.
