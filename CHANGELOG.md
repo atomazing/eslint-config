@@ -1,3 +1,11 @@
+## [2.1.0](https://github.com/atomazing/eslint-config/compare/v2.0.0...v2.1.0) (2025-05-11)
+
+
+### Features
+
+* update dependencies ([7dc7a2d](https://github.com/atomazing/eslint-config/commit/7dc7a2da60a44d5b8715aef555ba0a5fce6de72f))
+* update ESLint rules for better clarity and configuration ([61a74eb](https://github.com/atomazing/eslint-config/commit/61a74eb11c05e6f53b38f4d46555b49cdba23300))
+
 ## [2.0.0](https://github.com/atomazing/eslint-config/compare/v1.1.0...v2.0.0) (2025-04-14)
 
 
