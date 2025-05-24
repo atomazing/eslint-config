@@ -1,3 +1,10 @@
+## [2.2.0](https://github.com/atomazing/eslint-config/compare/v2.1.0...v2.2.0) (2025-05-24)
+
+
+### Features
+
+* update dependencies, move `eslint` package to `devDependencies` & `peerDependencies` only ([48ab254](https://github.com/atomazing/eslint-config/commit/48ab254b96596a5178d1761818c7002c309a150e))
+
 ## [2.1.0](https://github.com/atomazing/eslint-config/compare/v2.0.0...v2.1.0) (2025-05-11)
 
 
