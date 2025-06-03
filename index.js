@@ -1,7 +1,7 @@
 // @ts-check
 import commentsPlugin from '@eslint-community/eslint-plugin-eslint-comments/configs'
-import eslintConfigPrettier from 'eslint-config-prettier/flat'
 import { defineConfig, globalIgnores } from 'eslint/config'
+import eslintConfigPrettier from 'eslint-config-prettier/flat'
 import globals from 'globals'
 
 import baseConfig from './base/index.js'
