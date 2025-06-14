@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/atomazing/eslint-config/compare/v2.3.0...v2.3.1) (2025-06-14)
+
+
+### Bug Fixes
+
+* bump minimum supported Node.js version ([7b55e96](https://github.com/atomazing/eslint-config/commit/7b55e9636f220b678662253c1e3811f1aa77ebb8))
+
 ## [2.3.0](https://github.com/atomazing/eslint-config/compare/v2.2.0...v2.3.0) (2025-06-03)
 
 
