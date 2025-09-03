@@ -1,3 +1,10 @@
+## [2.6.0](https://github.com/atomazing/eslint-config/compare/v2.5.0...v2.6.0) (2025-09-03)
+
+
+### Features
+
+* update dependencies + TS 5.9 support, add `atob` and `btoa` into the `no-restricted-globals` ([a44d87d](https://github.com/atomazing/eslint-config/commit/a44d87d772873b2a736c0feef8048b3f3ee3848b))
+
 ## [2.5.0](https://github.com/atomazing/eslint-config/compare/v2.4.0...v2.5.0) (2025-07-09)
 
 
