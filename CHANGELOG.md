@@ -1,3 +1,14 @@
+## [3.0.0](https://github.com/atomazing/eslint-config/compare/v2.6.0...v3.0.0) (2025-09-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* Increase minimum required Node.js version to `>=20.10`, update peer dependency for `eslint` to version `>=9.29`
+
+### Features
+
+* Increase minimum required Node.js version to `>=20.10`, update peer dependency for `eslint` to version `>=9.29` ([31c019a](https://github.com/atomazing/eslint-config/commit/31c019aaf65927a0d935610f413ad172d87d3e1a))
+
 ## [2.6.0](https://github.com/atomazing/eslint-config/compare/v2.5.0...v2.6.0) (2025-09-03)
 
 
