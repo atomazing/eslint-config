@@ -1,3 +1,10 @@
+## [3.2.0](https://github.com/atomazing/eslint-config/compare/v3.1.0...v3.2.0) (2025-09-30)
+
+
+### Features
+
+* update ESLint import order ([8483b09](https://github.com/atomazing/eslint-config/commit/8483b099747dcbf41d4a51855aeb97594d75369a))
+
 ## [3.1.0](https://github.com/atomazing/eslint-config/compare/v3.0.0...v3.1.0) (2025-09-30)
 
 
