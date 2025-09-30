@@ -1,4 +1,13 @@
 {
+	"branches": [
+		"master",
+		"main",
+		{
+			"name": "2.x",
+			"range": "2.x",
+			"channel": "2.x"
+		}
+	],
 	"plugins": [
 		[
 			"@semantic-release/commit-analyzer",
