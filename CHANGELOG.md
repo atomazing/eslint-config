@@ -1,3 +1,10 @@
+## [3.3.0](https://github.com/atomazing/eslint-config/compare/v3.2.0...v3.3.0) (2025-10-19)
+
+
+### Features
+
+* update dependencies and remove redundant ESLint rules ([28e97b6](https://github.com/atomazing/eslint-config/commit/28e97b6589747458a9ef64bb75ebefc7a2fc54ef))
+
 ## [3.2.0](https://github.com/atomazing/eslint-config/compare/v3.1.0...v3.2.0) (2025-09-30)
 
 
