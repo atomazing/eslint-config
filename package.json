@@ -1,6 +1,6 @@
 {
 	"name": "@atomazing-org/eslint-config",
-	"version": "3.5.0",
+	"version": "3.5.1",
 	"type": "module",
 	"license": "MIT",
 	"author": "whoisYeshua + MarkSinD",

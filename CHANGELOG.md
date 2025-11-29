@@ -1,3 +1,7 @@
+## <small>3.5.1 (2025-11-29)</small>
+
+* fix: update project Node.js versionto to 22.18.0  and bump `semantic-release` to 25 ([39308e3](https://github.com/atomazing/eslint-config/commit/39308e3))
+
 ## [3.5.0](https://github.com/atomazing/eslint-config/compare/v3.4.0...v3.5.0) (2025-11-29)
 
 
