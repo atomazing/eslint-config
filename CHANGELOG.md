@@ -1,3 +1,10 @@
+## [3.5.0](https://github.com/atomazing/eslint-config/compare/v3.4.0...v3.5.0) (2025-11-29)
+
+
+### Features
+
+* update `typescript-eslint` to ^8.48.0 and try to enable Trusted publishing ([f8c6786](https://github.com/atomazing/eslint-config/commit/f8c67866843f0899dba4e45fa5e29b568d8ff16b))
+
 ## [3.4.0](https://github.com/atomazing/eslint-config/compare/v3.3.0...v3.4.0) (2025-11-16)
 
 
