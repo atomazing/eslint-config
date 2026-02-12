@@ -1,3 +1,9 @@
+## [3.7.0](https://github.com/atomazing/eslint-config/compare/v3.6.0...v3.7.0) (2026-02-12)
+
+### Features
+
+* update dependencies and adapt to `eslint-plugin-react-refresh` 0.5 ([e5dbe7a](https://github.com/atomazing/eslint-config/commit/e5dbe7ae6901520f286763e5bb4b516c667fc158))
+
 ## [3.6.0](https://github.com/atomazing/eslint-config/compare/v3.5.1...v3.6.0) (2026-01-25)
 
 
