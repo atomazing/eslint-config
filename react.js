@@ -1,6 +1,7 @@
+// @ts-check
 import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
-import reactRefreshPlugin from 'eslint-plugin-react-refresh'
+import { reactRefresh } from 'eslint-plugin-react-refresh'
 
 /** @type {import('eslint').Linter.Config[]} */
 const config = [
@@ -10,7 +11,7 @@ const config = [
 	{
 		name: 'react-atomazing',
 		plugins: {
-			'react-refresh': reactRefreshPlugin,
+			'react-refresh': reactRefresh.plugin,
 		},
 		settings: {
 			react: {

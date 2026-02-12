@@ -1,10 +1,16 @@
-## 3.6.0 (2026-01-25)
+## [3.6.0](https://github.com/atomazing/eslint-config/compare/v3.5.1...v3.6.0) (2026-01-25)
 
-* feat: update dependencies to latest versions ([105b49a](https://github.com/atomazing/eslint-config/commit/105b49a))
 
-## <small>3.5.1 (2025-11-29)</small>
+### Features
 
-* fix: update project Node.js versionto to 22.18.0  and bump `semantic-release` to 25 ([39308e3](https://github.com/atomazing/eslint-config/commit/39308e3))
+* update dependencies to latest versions ([105b49a](https://github.com/atomazing/eslint-config/commit/105b49a))
+
+## [3.5.1](https://github.com/atomazing/eslint-config/compare/v3.5.0...v3.5.1) (2025-11-29)
+
+
+### Bug Fixes
+
+* update project Node.js version to 22.18.0 and bump `semantic-release` to 25 ([39308e3](https://github.com/atomazing/eslint-config/commit/39308e3))
 
 ## [3.5.0](https://github.com/atomazing/eslint-config/compare/v3.4.0...v3.5.0) (2025-11-29)
 
