@@ -1,3 +1,9 @@
+## [3.7.1](https://github.com/atomazing/eslint-config/compare/v3.7.0...v3.7.1) (2026-03-10)
+
+### Bug Fixes
+
+* pin eslint dependencies and resolve minimatch alert ([24d8af3](https://github.com/atomazing/eslint-config/commit/24d8af3ff9334198c217d507a1b30d0ba5b9800e))
+
 ## [3.7.0](https://github.com/atomazing/eslint-config/compare/v3.6.0...v3.7.0) (2026-02-12)
 
 ### Features
