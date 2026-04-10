@@ -19,9 +19,9 @@ const config = [
 			// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md
 			'import/export': 'error',
 
-			// disallow use of jsdoc-marked-deprecated imports
-			// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md
-			'import/no-deprecated': 'error',
+			// report references to @deprecated symbols using TypeScript type information (prefer this over import/no-deprecated: it is type-aware, so it catches deprecated symbols from TypeScript declarations (.d.ts) and cross-file imports that import/no-deprecated may miss)
+			// https://typescript-eslint.io/rules/no-deprecated/
+			'@typescript-eslint/no-deprecated': 'error',
 
 			// Forbid the use of extraneous packages
 			// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
