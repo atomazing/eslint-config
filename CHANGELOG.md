@@ -1,3 +1,13 @@
+## [3.8.0](https://github.com/atomazing/eslint-config/compare/v3.7.1...v3.8.0) (2026-04-10)
+
+### Features
+
+* update lint dependencies for TypeScript 6 support ([1413c7b](https://github.com/atomazing/eslint-config/commit/1413c7bd93689bb1d050a1ebdb67cf79312c5eb4)), closes [#5](https://github.com/atomazing/eslint-config/issues/5)
+
+### Bug Fixes
+
+* replace import/no-deprecated with type-aware deprecation checks ([0eb0a5e](https://github.com/atomazing/eslint-config/commit/0eb0a5ea53ffe08005b6fc0ae7c2387880588daa)), closes [#4](https://github.com/atomazing/eslint-config/issues/4)
+
 ## [3.7.1](https://github.com/atomazing/eslint-config/compare/v3.7.0...v3.7.1) (2026-03-10)
 
 ### Bug Fixes
