@@ -1,3 +1,9 @@
+## [3.11.0](https://github.com/atomazing/eslint-config/compare/v3.10.0...v3.11.0) (2026-06-12)
+
+### Features
+
+* update dependencies and adapt unicorn rules ([fd12c4c](https://github.com/atomazing/eslint-config/commit/fd12c4c811326f02ac17aaa5939468c4d998d59b))
+
 ## [3.10.0](https://github.com/atomazing/eslint-config/compare/v3.9.0...v3.10.0) (2026-05-09)
 
 ### Features
