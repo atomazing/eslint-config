@@ -1,3 +1,9 @@
+## [3.11.1](https://github.com/atomazing/eslint-config/compare/v3.11.0...v3.11.1) (2026-06-12)
+
+### Bug Fixes
+
+* raise repeated comparison threshold ([86ab36a](https://github.com/atomazing/eslint-config/commit/86ab36af705ee54c551ef473baad9c6147b632e7))
+
 ## [3.11.0](https://github.com/atomazing/eslint-config/compare/v3.10.0...v3.11.0) (2026-06-12)
 
 ### Features
