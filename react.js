@@ -89,7 +89,7 @@ const config = [
 			// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md
 			'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
 
-			// Disallow missing props validation in a React component definition (prop types не используем на проекте)
+			// Disallow missing props validation in a React component definition (PropTypes are not used in the project)
 			// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prop-types.md
 			'react/prop-types': 'off',
 		},

@@ -38,7 +38,7 @@ const config = [
 			// https://typescript-eslint.io/rules/no-non-null-assertion
 			'@typescript-eslint/no-non-null-assertion': 'warn',
 
-			// Require using `namespace` keyword over `module` keyword to declare custom TypeScript module (Не используем namespace и уж тем более устаревший module)
+			// Require using `namespace` keyword over `module` keyword to declare custom TypeScript module (We do not use namespace, let alone the deprecated module)
 			// https://typescript-eslint.io/rules/prefer-namespace-keyword/
 			'@typescript-eslint/prefer-namespace-keyword': 'off',
 		},
