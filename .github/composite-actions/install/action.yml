@@ -17,5 +17,4 @@ runs:
     - name: Install dependencies  🔧
       shell: bash
       run: |
-        corepack enable
         pnpm i
