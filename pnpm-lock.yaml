@@ -110,10 +110,10 @@ importers:
   .:
     dependencies:
       '@eslint-community/eslint-plugin-eslint-comments':
-        specifier: ^4.7.2
+        specifier: ^4.8.0
         version: 4.8.0(eslint@9.39.5(jiti@2.6.1)(supports-color@7.2.0))
       '@eslint/js':
-        specifier: ^9.39.4
+        specifier: ^9.39.5
         version: 9.39.5
       eslint-config-prettier:
         specifier: ^10.1.8
@@ -131,23 +131,23 @@ importers:
         specifier: ^7.1.1
         version: 7.1.1(eslint@9.39.5(jiti@2.6.1)(supports-color@7.2.0))(supports-color@7.2.0)
       eslint-plugin-react-refresh:
-        specifier: ^0.5.2
+        specifier: ^0.5.6
         version: 0.5.6(eslint@9.39.5(jiti@2.6.1)(supports-color@7.2.0))
       eslint-plugin-unicorn:
         specifier: ^65.0.1
         version: 65.0.1(eslint@9.39.5(jiti@2.6.1)(supports-color@7.2.0))
       globals:
-        specifier: ^17.6.0
+        specifier: ^17.12.0
         version: 17.12.0
       typescript-eslint:
-        specifier: ^8.61.0
+        specifier: ^8.70.0
         version: 8.70.0(eslint@9.39.5(jiti@2.6.1)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
     devDependencies:
       '@commitlint/cli':
-        specifier: ^21.0.2
+        specifier: ^21.2.2
         version: 21.2.2(@types/node@26.5.0)(conventional-commits-parser@7.1.2)(typescript@6.0.3)
       '@commitlint/config-conventional':
-        specifier: ^21.0.2
+        specifier: ^21.2.2
         version: 21.2.2
       '@semantic-release/changelog':
         specifier: ^6.0.3
@@ -159,22 +159,22 @@ importers:
         specifier: ^9.3.1
         version: 9.3.1
       eslint:
-        specifier: ^9.39.4
+        specifier: ^9.39.5
         version: 9.39.5(jiti@2.6.1)(supports-color@7.2.0)
       husky:
         specifier: ^9.1.7
         version: 9.1.7
       lint-staged:
-        specifier: ^17.0.7
+        specifier: ^17.5.0
         version: 17.5.0
       prettier:
-        specifier: ^3.8.4
+        specifier: ^3.9.6
         version: 3.9.6
       rimraf:
         specifier: ^6.1.3
         version: 6.1.3
       semantic-release:
-        specifier: ^25.0.3
+        specifier: ^25.0.9
         version: 25.0.9(supports-color@7.2.0)(typescript@6.0.3)
 
 packages:
