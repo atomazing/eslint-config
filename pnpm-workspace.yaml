@@ -1,2 +1,5 @@
+lockfile:
+  format: v13
+
 allowBuilds:
   unrs-resolver: false
