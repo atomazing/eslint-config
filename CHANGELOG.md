@@ -1,3 +1,9 @@
+## [3.12.0](https://github.com/atomazing/eslint-config/compare/v3.11.1...v3.12.0) (2026-11-19)
+
+### Features
+
+* update dependencies ([bdf9b9d](https://github.com/atomazing/eslint-config/commit/bdf9b9d027659e6e0daf6fd426f9a6e71748e0d8))
+
 ## [3.11.1](https://github.com/atomazing/eslint-config/compare/v3.11.0...v3.11.1) (2026-06-12)
 
 ### Bug Fixes
